@@ -1,0 +1,12 @@
+Hyperparameter,Value
+Sequence Length,256
+Batch Size,64
+Learning Rate,3e-4 (scaling) / 1e-4 (best)
+Weight Decay,0.01
+Optimizer,AdamW
+LR Schedule,Cosine Annealing
+Gradient Clipping,1.0
+Dropout,0.1
+Epochs (scaling study),1
+Epochs (best model),3
+Max Batches (if limited),500
