@@ -4,7 +4,7 @@
   "best_val_loss": 0.24441168485070341,
   "test_loss": 0.2448367249706517,
   "perplexity": 1.2774127265764343,
-  "train_time": 7161.514234781265,
+  "train_time": 7157.9732530117035,
   "batch_size": 64,
   "epochs": 2,
   "history": {
