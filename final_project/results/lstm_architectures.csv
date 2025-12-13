@@ -1,0 +1,5 @@
+Name,embed_dim,hidden_dim,n_layers,Parameters
+tiny,256,512,2,"3,802,786"
+small,384,768,3,"13,181,346"
+medium,512,1024,4,"31,739,042"
+large,768,1536,5,"90,088,098"

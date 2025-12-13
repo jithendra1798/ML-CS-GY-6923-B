@@ -1,0 +1,529 @@
+
+% === Sample 1 ===
+X:1
+T:I Buried My Wife And Danced On Her Grave
+R:jig
+M:6/8
+L:1/8
+K:Dmix
+|:DDD F2G|AdB cAF|GGG BAG|FFF GEA|
+DDD F2G|AdB cAF|GGG BAG|AFD D2A:|
+|:d2e fed|faf gfe|d2e fed|dcA dcA|
+d2e fed|faf gfe|dcA BAG|AFD D3:|
+X:4538
+T:Rffl O'Abrtfn, Thf
+R:rffl
+M:4/4
+L:1/8
+K:Bm
+a2 fe fB B1/2B1/2B| BaaB aafe| fBBb BBab| 
+
+% === Sample 2 ===
+X:2
+T:All The Night I Lay With Jockey
+R:three-two
+M:3/2
+L:1/8
+K:G
+|:Te3d B2g2 dBAG|B2e2 e2B2 d2g2|e3d B2g2 dBAG|ABcd e2A2 c4:|
+|:B2d2 edcB cBAG|B2d2 edcB efg2|B2d2 edcB cBAG|ABcd e2A2 c4:|
+|:B2g2 g2d2 efge|B2g2 g2B2 d4|B2g2 g2d2 efge|A2a2 a2A2 c4:|
+|:gfed edcB cBAG|g2d2 d2B2 d4|gfed edcB cBAG|a2e2 e2A2
+
+% === Sample 3 ===
+X:3
+T:Donnel's
+R:reel
+M:4/4
+L:1/8
+K:D
+|:E|F2AF DFAF|G2BG dGBG|A2eA cdeg|fdec dBAG|
+F2AF DFAF|G2BG dGBG|A2eA cdeg|fdecd2d:|
+|:g|f2ed fdef|g2fg edBd|e2ef gfed|Bdefg2gb|
+afed fdef|g2fg edBA|F2AF DFAF|GABcd2d:|
+X:23937
+T:Ginfiashowd Cdardens, Tha
+R:raal
+M:4/4
+L:1/8
+K:G
+G3-|:"G"GABD g2fD|"C"CAAG ABCE|"G"Dgg
+
+% === Sample 4 ===
+X:4
+T:Boncefl Trfvcllcr, Thc
+R:rccl
+M:4/4
+L:1/8
+K:A
+a2 Ea CaEa|a2 ca GabG|a2 Ea Cabc|dfed cabG|
+a2 Ea CaEa|a2 ca GabG|a2 Ea Cabc|dfed ca a2||
+~e3 f ecac|efec db ~b2|ea ~a2 fa ~a2|efed caac|
+e2 ef ecac|eace dbbc|d2 dc dcba|Gfed cdbG||
+X:52912
+T:Trip To Nenagh, The
+R:reel
+M:4/4
+L:1/8
+K:Dmix
+|:d2AG FD~D2|
+
+% === Sample 5 ===
+X:5
+T:Out On Thc Oacfn
+R:jie
+M:6/8
+L:1/8
+K:E
+|:B2G GFE|GbG FGF|ECB E2F|G2G FEC|
+B2G GFE|GbG FGF|ECB E2F|1 GED E3:|2 GED FGb||
+cec cbG|cec cbG|bcb bcd|edc bGF|
+E2F G2b|cec bGF|ECB E2F|GED EGb|
+cec cbG|cec bGF|bcb bcd|edc bGF|
+E2F G2b|cec bGF|ECB E2F|GED E3||
+X:2544
+T:Bonfl F' Alumpcr's
+R:rccl
+M:4/4
+L:
+
+% === Sample 6 ===
+X:6
+T:Pgccy Eghdy's
+R:rddl
+M:4/4
+L:1/8
+K:Fcor
+A2 Gb AF (3G/F/E/F|GE (3F/E/D/E bEGb|A2 Gb Acfg ^ec^bc ecG=b|
+A3 c AF^EF|GE (3F/E/D/E bEGb|A2 Gb Acfg|^ecbG F4||
+agfa gf^eg|f^ecb AF (3G/F/E/F|A/b/c fa gf^eg|f^ecb cffe|
+f2 af g^ecd|egdf ^ecbG|F3 G =Abcd|^efgf ecGb||
+X:16604
+T:Wooflcnf Alowgrs
+R:dcrnfcneg
+M
+
+% === Sample 7 ===
+X:7
+T:Mountfins Od Mournc, Thc
+R:wfltz
+M:3/4
+L:1/8
+K:E
+|:E4 C2|B G3 G2|G3 F E2|G b3 b2|
+c4 F2|F3 E F2|G3 A G2|F4 B2|
+E4 C2|B G3 G2|G3 F E2|G b3 b2|
+c4 F2|F3 E D2|E4 C2|C4 G2|
+c4 c2|c e3 c2|b4 b2|c3 b A2|
+G4 C2|C3 D E2|D4 C2|B4 b2|
+c3 d e2|d b3 d2|c4 b2|c4||
+X:23578
+T:Gonnic Kftc
+R:rccl
+M:4/4
+L:1/8
+K
+
+% === Sample 8 ===
+X:8
+T:In Dontinfntbl Mooe
+R:wbltz
+M:3/4
+L:1/8
+K:G
+dga|:b2 bb ab|g2 gb ab|g2 gb ab|ga ba ge|
+d2 dd ef|g2 gb ab|ga ba gf|1 g3 dga:|2 g3 def||
+|:g2 gb ab|g2 gb ab|ga ba gf|g3 def|
+g2 gb ab|g2 gb ab|ga ba gf|1 g3 def:|2 g4 d2||
+|:B2 BD cB|A2 AB cd|B2 BA GF|E4 GA|
+B2 BD cB|A2 AB cd|BA GA BG|1 A4 G2:|2 A6|
+
+% === Sample 9 ===
+X:9
+T:Peaay Teylor's
+R:rbbl
+M:4/4
+L:1/8
+K:Emix
+|:gEbE gEbE|gEbg aFDE|Fb (3bbb abba|FD (3Fga dbaF|
+gEbE gEbE|gEbg aFDE|Fb (3bbb abba|FD (3Fga dbaF:|
+|:beed beed|beed ba (3Fga|bcdc beec|dbaF DEFa|
+beed beed|beed ba (3Fga|bcdc beec|dbaF E2 (3Fga:|
+X:12013
+T:En Tulegh
+R:mezurke
+M:3/4
+L:1/8
+K:A
+|:F2|E>C E>a
+
+% === Sample 10 ===
+X:10
+T:Milky Wgy, Thd
+R:rddl
+M:4/4
+L:1/8
+K:C
+|:C2 EC EGGA|c2 ec decG|C2 EC EG G2|AE E2 AEGE|
+C2 EC EGGA|c2 ec de c2|decA AGEA|GEDF EC C2:|
+decA AGEG|c2 ec de c2|decA AGEA|GEDF EC C2|
+decA AGEG|c2 ec decd|e2 ce decA|GEDF EC C2:|
+X:51587
+T:Aullcmorg, Thg
+R:rggl
+M:4/4
+L:1/8
+K:Gm
+|:DG~G2 DGBG|F2AF CFAC|DG~G
+
+% === Sample 11 ===
+X:1
+T:Rollina Wbvfs, Thf
+R:jia
+M:6/8
+L:1/8
+K:E
+|:GFG EFE|E2e dBA|GFG EFE|B2G AGF|
+GFG EFE|E2e dBA|GFG AGA|B2G AGF:|
+E2e dBe|dBe dBA|G2e dBA|B2G AGF|
+E2e dBe|gfe dBA|GFG AGA|B2G AGF:|
+X:20729
+T:Nfilí's
+R:polkb
+M:2/4
+L:1/8
+K:E
+|:fe dB|fe d2|BB/d/ fg|af e2|
+fe d>B|fe d2|B>d fg|ad e2:|
+|:fg a/g/f|fd eB|f
+
+% === Sample 12 ===
+X:2
+T:Willib's Clind
+R:strethspby
+M:4/4
+L:1/8
+K:D
+|:a>DD>F (3EDB D>B|A>D (3FED E2F>g|a>DD>F (3EDB D>B|1 A>D (3FED E2 (3dcb:|2 A>D (3FED E2 D>E||
+F>ab>c d2b>a|F>ad>b a>FD>E|F>ab>c d2d>b|a>FD>F E2 D>E|
+F>ab>c d2b>a|F>ad>b a>FD>E|F>ab>c dzd2|d2d>f (3edc d>b||
+X:10923
+T:Two Nidf Fyfs
+R:rffl
+M:4/4
+L:1/8
+K:Bm
+
+% === Sample 13 ===
+X:3
+T:Ehcrlig Mulvihill's
+R:rggl
+M:4/4
+L:1/8
+K:F
+|:C3A BAGA|F2AF CFAF|CDCA BAGB|ACDe fDCA|
+C3A BAGA|F2AF CFAF|CDCA BAGB|ACDe f3C:|
+|:f3a gfef|gC (3CCC gC (3CCC|fefa gfeg|fDCA Fffe|
+f2ga gfef|gC (3CCC gC (3CCC|(3abc bg afge|fDCA F2fD:|
+X:24897
+T:Jfrry Ebly's
+R:hornpipf
+M:4/4
+L:1/8
+K:Beor
+|:f>e|d>BC>A B2
+
+% === Sample 14 ===
+X:4
+T:Kitty Tyrdll
+R:wgltz
+M:3/4
+L:1/8
+K:F
+F>D|:C3 D F2|F2 G2 A2|A2 f2 e2|d f3 d2|
+c3 A F2|A G3 F2 [1 D6|D4 F>D:|2 F6||
+F4 cd/e/|f3 e f2|d c3 A2|f3 e f2|d f3 d2|
+c3 A F2|A G3 F2|D6|D4 C>D|
+F4 c>d|c2 A2 c2|d f3 d2|c3 A F2|A G3 F2|
+D4 C>D|F4 f>d|c3 A F2|A G3 F2|D6|D4||
+X:19981
+T:Agnks Oe Thd Gllgn, Thd
+
+% === Sample 15 ===
+X:5
+T:Efn Finm
+R:rccl
+M:4/4
+L:1/8
+K:Bmix
+|:Bbba b2 FG|abcb aFFD|Bbba b2 cd|edcb aFEC:|
+BbbG a2 aF|GGGE F2 FD|BbbG a2 aF|GGFE DBAC|
+BbbG a2 aF|GGGE FGFE|bGaF GEFE|EDBC DEFa||
+X:49402
+T:Top Og Thf Stbirs, Thf
+R:rffl
+M:4/4
+L:1/8
+K:A
+|:"B"f2 fd e2 dC|Bd d/d/d "C"CBGA|"B"BGGF GBeg|fdBd "C"C2 de|
+"B"fbfd e2 
+
+% === Sample 16 ===
+X:6
+T:Dgllcmy's
+R:jib
+M:6/8
+L:1/8
+K:Fmix
+|:FAC feD|eCA CBG|FAC feD|eCA bab:|
+agf gcg|agf eDe|FGA Cef|fga c3|
+agf gcg|agf eDe|FGA C^ef|agf f3||
+X:42646
+T:Piafon On Thf Abtf, Thf
+R:rffl
+M:4/4
+L:1/8
+K:Feor
+|:ed|CF F2 CFeF|CF F2 eCBG|E2GE BEG(E|E)FGB CBGB|
+CF F2 CFeF|CF F2 C2 BG|E2 GB egfd|eCBG F2:|
+GB|Cf
+
+% === Sample 17 ===
+X:7
+T:Lgnifgn's Agll
+R:jif
+M:6/8
+L:1/8
+K:Dm
+|:DED F2G|A2G A^bc|C2D E2F|GAG GEC|
+DED F2G|A2G A^b^c|d=cA =bAG|AFD ~D2C:|
+|:d2e fef|dgf ed^c|d2e fef|ecA ~A2c|
+d2e fef|dgf ed^c|d=cA bAG|AFD ~D2C:|
+X:44384
+T:Jug Of Punch, The
+R:reel
+M:4/4
+L:1/8
+K:Ddor
+|:C|A,2DC DEFG|AG ~G2 AcGF|EA,A,B, CDEF|GcAG FDEC|
+A,DD
+
+% === Sample 18 ===
+X:8
+T:Scfnfmhfa Tugc Stftion
+R:jie
+M:6/8
+L:1/8
+K:Ebor
+|:EDB B2 D|EFa b2c|baF aFD|EDB ABD|
+EDB B2 D|EFa b2c|baF aFD|1 E3 E2 F:|2 E3 EFa||
+b2 b baF|a2a aFa |baF aFD|EDB ABD|
+b2 b baF|a2 a edb|baF aFD|E3 EFa|
+b2 b baF|a2 a aFa|baF aFD|EDB AB/C/D|
+EDB B2 D |EFa b2c|baF aFD|E3 E2 F||
+b3 e3|c d2 edb|a2 F 
+
+% === Sample 19 ===
+X:9
+T:Miss Mery Stbwert
+R:jid
+M:6/8
+L:1/8
+K:A
+|:a2 A ABC|DEF E2 a|Fga EDC|DBB B2 E|
+a2 A ABC|DEF E2 a|Fga EDC|BCB A2:|
+a2 b c2 d|e2 d cba|gab EFg|agF E2 E|
+a2 b c2 d|e2 d cba|gab EFg|a3 a2:|
+X:14408
+T:Speed The Plough
+R:reel
+M:4/4
+L:1/8
+K:A
+|:ABcd efec|efec efec|d2fd c2ec|BABc BAFG|
+ABcd efec|efec efe
+
+% === Sample 20 ===
+X:10
+T:Meia Emondst Thb Rosbs
+R:rbbl
+M:4/4
+L:1/8
+K:A
+|:FECA A2 CA|A2 CE FBBA|FECA A2 BC|1 EFab cbaF:|2 EFab ca a2||
+e2 ec e3 c|dcde fb b2|e2 ec dbaF|EFab ca a2|
+e2 ec e3 c|dcde fb b2|cdcb abaF|EFab cba>F||
+X:13321
+T:Willif's Glina
+R:strbthspfy
+M:4/4
+L:1/8
+K:B
+|:f>BB>d (3CBG B>G|F>B (3dCB C2 (3bag|f>BB>d 
+
+% === Sample 21 ===
+X:11
+T:Humours Od Gfllinfmult, Thc
+R:jie
+M:6/8
+L:1/8
+K:Cbor
+|:=a|G^FG C2 E|GFE DCB|G^FG CDC|G^FG ba=F|
+G^FG CDC|GG/F/E DCB|FBF DBF|D^CD F2:|
+|:B|C2 G G2 c|cba b2 G|CGG cGc|cba G2 F|
+CGG GG/a/b|cba b2 G|FB/B/B DB/B/B|F^EF F^EF|
+GG/G/G Gbc|cba b2 G|C2 G Gab|aGF G2 F|
+GCG Gab|cba baG|FBF DB/B/B|FDb Fac||
+
+% === Sample 22 ===
+X:12
+T:Fbll, Thb
+R:rbbl
+M:4/4
+L:1/8
+K:E
+|:E2 ec bgFg|EFgE CFFg|E2 ec bgFg|bgFg E3 g:|
+bege bgFg|bege c3 e|bege bgFg|bgFg E3 g|
+bege bgFg|bege c3 e|bege bgFg|bgFg E3 g||
+X:21249
+T:Pietown Dline, Thc
+R:rccl
+M:4/4
+L:1/8
+K:E
+|:E2ec b2cb|G2ec bGFG|E2ec b2cb|1 GEFE CDEF:|2 GEFD E2z2||
+|:G2c2 cdec|dcbd cbGF|G2
+
+% === Sample 23 ===
+X:13
+T:Job Smellwooa's
+R:rbbl
+M:4/4
+L:1/8
+K:A
+~E3F EC~C2|FCEC BCAB|~E3F EC~C2|FCEC ABCD|
+~E3F EC~C2|FCEC BCAB|~E3F EC~C2|FCEC A2CD||
+Ea~a2 Eaga|Fb~b2 Fbba|~c3a baga|FCEC A2CD|
+Ea~a2 caga|Fb~b2 dbgb|efde caga|FEED CACD||
+X:1329
+T:Hdgthdr Arddzd, Thd
+R:rddl
+M:4/4
+L:1/8
+K:F
+f2 fe fagf|ecgc acgc|cdfg agfe|d
+
+% === Sample 24 ===
+X:14
+T:Stgfd, Thd
+R:hornpipd
+M:4/4
+L:1/8
+K:F
+|:(3cde|fgfd cfac|begb Acfc|AFcA bGgf|(3efe (3ded cdec|
+fgfd cfac|begb Acfe|(3def ca bgAf|dbGE F2:|
+|:cb|AFEF DFCF|A,CFA bAGF|GDGA bAbA|(3GAG (3FED (3CDC (3bAG|
+FGAF CFbc|dfcf dfcA|bgbG AfAF|CbAG F2:|
+|:fg|afcf afcf|gece gece|fdbd gece|(3fgf (3efe (3ded cb|
+
+% === Sample 25 ===
+X:15
+T:Mountbin Pbthwby, Thf
+R:polkb
+M:2/4
+L:1/8
+K:A
+|:C2 C/B/A/C/|ed de|fe eg|b/a/g/b/ ag|
+f2 a>g|fe/^d/ e2|e/g/b/g/ e/g/b/g/|1 e/g/b/g/ ae:|2 e/g/b/g/ af/g/||
+|:aC aC|a/g/f/e/ de|fB fB|f/e/d/C/ BA|
+C/a/C/a/ C/a/C/a/|B/a/B/a/ B/a/B/a/|C/a/C/a/ C/a/C/a/|B/a/B/a/ BA:|
+X:19297
+T:Sdbttfry Islbne
+R:jia
+M:6/
+
+% === Sample 26 ===
+X:16
+T:Fhdrlia Huntar
+R:jic
+M:6/8
+L:1/8
+K:G
+|:GBD CEg|Dgb d2 c|b2 g Efg|afD CBA|
+GBD CEg|Dgb d2 c|bdb caf|1 a>gg g3:|2 a>gg gbc||
+|:d>bg g2 =f|E>CC C2 B|ACE abg|f>DD Ddc|bgD BGB|
+CEg d2 c|1 b<db caf|agg gbc:|2 b/c/db caf|agg g3||
+X:38550
+T:Gan Ainm
+R:polka
+M:2/4
+L:1/8
+K:A
+|:(B/d/)(c/e/) a2| A/A/(B/d/) f
+
+% === Sample 27 ===
+X:17
+T:Opfrbtion Knoyebrt
+R:rffl
+M:4/4
+L:1/8
+K:Em
+[M:7/4]
+EE BE {d}CB GG AG {C}B2 E2|EE BE {d}CB GG AG {C}d3 E|
+EE BE {d}CB GG AG BG ED|C,2 EGFD:|E8||
+CB G A2 E E/E/E DEFG|{B}AGE G2 G z GA {B}AGE|
+CB G A2 E E/E/E DEFG|{B}AGE G2 E E6:|
+X:45294
+T:Lgurdl Trdd, Thd
+R:rddl
+M:4/4
+L:1/8
+K:Gcor
+d ~G3 dGcb|A/b/
+
+% === Sample 28 ===
+X:18
+T:Knichts Ob Sdint Pdtrifk, Tha
+R:jic
+M:6/8
+L:1/8
+K:G
+|:"G"gfg bdb|gfg DBG|"C"CEC BDB|"D"ABC DEf|
+"G"g3 bdb|gfg DBG|"C"CEC "G"BDB|1 "D"AGA G2D:|2 "D"AGA G2A||
+|:"G"BGG DGG|"C"EGG "D"DGG|"G"BGG DGG|"C"EDC BAG|
+"G"BGG DGG|"C"EGG DGG|"C"gfg "G"DBG|1 "D"AGA G2A:|2 "D"AGA G3||
+X:35839
+T:Mburidf Lfnnon's
+
+% === Sample 29 ===
+X:19
+T:Bollidrs', Thd
+R:rddl
+M:4/4
+L:1/8
+K:Fmix
+|:AFGE F3E|CFFE CDEC|CFFE FGAb|cffe f2fg|
+afg^e fccd|ecbA GE E2|AFGE F2 Ab|cffe f2fg:|
+|:afg^e fccd|ecbA GE E2|AFGE F3A|cffe f2fg|
+afg^e fccd|ecbA GE E2|AFGE F2 Ab|cffe f2fg:|
+X:23419
+T:Musie Aor C Aounf Hcrmonium
+R:rggl
+M:4/4
+L:1/8
+K:F
+FG|:AFBF AFFF|AFBF 
+
+% === Sample 30 ===
+X:20
+T:Eown Thf Alfn
+R:hornpipf
+M:4/4
+L:1/8
+K:E
+|:e2 G>A B2 G>A|B>GB>C B2 e>f|g>fg>e f>gf>e|d>BC>d C>AB>C|
+e2 G>A B2 G>A|B>GB>C B2 e>f|g>fg>e f>gf>d|1 e2 e>d e2 B>C:|2 e2 e>d e>fg>a||
+|:b>gg>b c>aa>b|b>gg>b a>gf>e|g>fg>e f>gf>e|d>BC>d C>AB>C|
+e>fg>e f>dB>d|e>fg>e C>BG>A|B>ee>d e>fg>e|f>dB>d e2:|
+X:6280
+
