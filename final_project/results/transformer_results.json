@@ -1,41 +1,41 @@
 {
   "tiny": {
     "params": 844800,
-    "val_loss": 1.1371694699577664,
-    "train_loss": 1.6309914632524762,
-    "train_time": 63.15146017074585,
-    "gpu_memory_gb": 2.188475904,
+    "val_loss": 1.13648637999659,
+    "train_loss": 1.6281974014554705,
+    "train_time": 85.97077751159668,
+    "gpu_memory_gb": 2.223792128,
     "batch_size": 384
   },
   "small": {
     "params": 4839936,
-    "val_loss": 0.9202435509018276,
-    "train_loss": 1.224305795437949,
-    "train_time": 170.46530556678772,
-    "gpu_memory_gb": 6.140614144,
+    "val_loss": 0.9205165816389996,
+    "train_loss": 1.2241241936138698,
+    "train_time": 190.9771065711975,
+    "gpu_memory_gb": 6.140089856,
     "batch_size": 384
   },
   "medium": {
     "params": 25417728,
-    "val_loss": 0.7981821687325187,
-    "train_loss": 1.0454427743503025,
-    "train_time": 503.06808066368103,
-    "gpu_memory_gb": 16.224896512,
+    "val_loss": 0.7979215124379033,
+    "train_loss": 1.0451376913479395,
+    "train_time": 556.5687201023102,
+    "gpu_memory_gb": 16.221750784,
     "batch_size": 384
   },
   "large": {
     "params": 85340160,
-    "val_loss": 0.6793326914310456,
-    "train_loss": 0.9100390168469478,
-    "train_time": 1409.399847984314,
-    "gpu_memory_gb": 24.701489664,
+    "val_loss": 0.6807715010643005,
+    "train_loss": 0.9100662609474284,
+    "train_time": 1645.8242571353912,
+    "gpu_memory_gb": 24.702145024,
     "batch_size": 256
   },
   "xl": {
     "params": 201904128,
     "val_loss": 0.6143297338485718,
     "train_loss": 0.9212437960488455,
-    "train_time": 3414.013855934143,
+    "train_time": 3417.6925132274628,
     "gpu_memory_gb": 24.697993728,
     "batch_size": 128
   }
