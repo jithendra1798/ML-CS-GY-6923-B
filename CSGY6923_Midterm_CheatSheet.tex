@@ -1,0 +1,175 @@
+
+\documentclass[9pt]{extarticle}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,amsmath,amssymb,mathtools,enumitem}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{bm}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\setlength{\columnsep}{0.2in}
+\setlength{\parindent}{0pt}
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\setlength{\abovedisplayshortskip}{2pt}
+\setlength{\belowdisplayshortskip}{2pt}
+\linespread{0.93}
+\pagestyle{empty}
+\titlespacing*{\section}{0pt}{2pt}{2pt}
+\titlespacing*{\subsection}{0pt}{1pt}{1pt}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\diag}{\mathrm{diag}}
+\begin{document}
+{\fontsize{6}{7}\selectfont
+
+\begin{center}
+\textbf{\Large CS-GY 6923 — Midterm Cheat Sheet (Lectures 1--6, HW1+HW2)}\\
+\small (two pages, two columns, $\approx$6pt font)
+\end{center}
+
+\begin{multicols*}{2}
+
+\section*{0. Supervised Learning \& ERM}
+Model class $f_\theta(x)$, parameters $\theta$, loss $\mathcal{L}(\theta) = \frac{1}{n}\sum_{i=1}^n \ell(f_\theta(x_i),y_i)$.
+\textbf{ERM: } $\theta^\*=\arg\min_\theta \mathcal{L}(\theta)$. Split train/val/test. Bias--variance, over/underfit.
+
+\section*{1. Linear Regression Essentials}
+Data $X\in\R^{n\times d}$, $y\in\R^n$. Predict $\hat y=X\beta$ (intercept via column of ones).
+\subsection*{OLS Loss, Gradient, Normal Eqns}
+$\displaystyle L(\beta)=\norm{y-X\beta}^2=(y-X\beta)^\top(y-X\beta)$\\
+$\displaystyle \nabla_\beta L=-2X^\top(y-X\beta)=2X^\top X\beta-2X^\top y$\\
+Set $\nabla L=0\Rightarrow \boxed{X^\top X\beta=X^\top y}$; if invertible, $\boxed{\beta^\*=(X^\top X)^{-1}X^\top y}$.\\
+If $X^\top X$ singular, use Moore--Penrose: $\beta^\*=X^+y$.
+
+\subsection*{Weighted Least Squares (HW1.P1)}
+Weights $w_i>0$. $W=\diag(w_1,\ldots,w_n)$.\\
+$\displaystyle L_W(\beta)=\sum_i w_i(\langle \beta,x_i\rangle-y_i)^2=\norm{W^{1/2}(y-X\beta)}^2$\\
+$\displaystyle \nabla L_W=-2X^\top W(y-X\beta)$, \quad
+\(\boxed{\beta^\*=(X^\top W X)^{-1}X^\top W y}\).
+
+\subsection*{Simple Regression Closed-Form}
+$\beta_1=\dfrac{\sum (x_i-\bar x)(y_i-\bar y)}{\sum (x_i-\bar x)^2},\quad \beta_0=\bar y-\beta_1\bar x.$
+
+\subsection*{Polynomial Features \& Regularization (HW2.P1)}
+Features $[1,x,x^2,\dots,x^{d-1}]$. Penalize $w_k^2$ with strength $\lambda_k$. Let $\Gamma=\diag(\lambda_0,\ldots,\lambda_{d-1})\succeq0$.\\
+\(\displaystyle \min_w \frac{1}{n}\norm{Xw-y}^2+w^\top \Gamma w\Rightarrow 
+\boxed{w^\*=\big(\tfrac{1}{n}X^\top X+\Gamma\big)^{-1}\tfrac{1}{n}X^\top y}\).\\
+For stronger shrinkage at higher degree: choose $\lambda_k$ increasing in $k$ (e.g. $\lambda_k=\lambda k^\alpha$ or $\lambda^k$).\\[2pt]
+\textit{Consecutive-similarity} regularizer: encourage $w_{k+1}\approx w_k$ via $\sum_{k=0}^{d-2}(w_{k+1}-w_k)^2=\norm{Dw}^2$ with first-difference $D$.\\
+Loss: $\frac{1}{n}\norm{Xw-y}^2+\mu\norm{Dw}^2$ $\Rightarrow$ normal eqns $(\frac{1}{n}X^\top X+\mu D^\top D)w=\frac{1}{n}X^\top y$ (closed form via linear solve).
+
+\section*{2. Central Tendency via Losses (HW1.P2)}
+\textbf{$\ell_2$:} $L(m)=\sum( y_i-m)^2\Rightarrow \frac{dL}{dm}=-2\sum(y_i-m)=0 \Rightarrow \boxed{m=\bar y}$.\\
+\textbf{$\ell_\infty$:} $L(m)=\max_i|y_i-m|$ minimized at the \textit{midrange} $\boxed{m=\tfrac{1}{2}(\min y+\max y)}$.\\
+\textbf{$\ell_1$:} $L(m)=\sum|y_i-m|$ minimized by any median: number of points left/right of $m$ are balanced. Subgradient: $0\in \sum \mathrm{sign}(y_i-m)$.
+
+\section*{3. Feature Transforms: Two-Piece Linear Fit (HW1.P3)}
+For knot $\lambda$, continuous two-piece:
+$f(x)=\begin{cases} a_1+s_1x,&x<\lambda\\a_2+s_2x,&x\ge\lambda\end{cases}$ with $a_1+s_1\lambda=a_2+s_2\lambda$.\\
+Equivalent unconstrained:
+$f(x)=a_1+s_1x+s_2(x-\lambda)_+$, where $(t)_+=\max(t,0)$.\\
+\textbf{Design:} $X=[\ \1,\ x,\ (x-\lambda)_+\ ]$, $w=[a_1,\ s_1,\ s_2]^\top$. Fit by OLS; recover $(a_1,s_1,s_2)$ directly.
+
+\section*{4. Invariance: Centering/Scaling (HW1.P4)}
+With an intercept column $\1$, mean-centering a feature $x_j' = x_j - \bar x_j$ leaves predictions unchanged: shift is absorbed by intercept.\\
+Formally, $X'=[\1,\ x_1',\dots,x_d']$, let $\beta_0'=\beta_0+\sum_j \bar x_j \beta_j$, $\beta_j'=\beta_j$; then $X'\beta'=X\beta$. Thus $\ell_2$ loss is identical.\\
+Scaling $x_j' = x_j/\sigma_j$ rescales coefficient: choose $\beta_j'=\sigma_j\beta_j$ (others unchanged) to keep $X'\beta'=X\beta$.\\
+\textbf{Note:} Under $\ell_1$ or $\ell_\infty$, invariance of the \emph{minimized value} need not hold (because the penalty geometry differs), but predictions can be matched by the same reparameterization if optimization is unconstrained.
+
+\section*{5. One-Hot Encoding: Drop-One (HW1.P5)}
+With intercept $\1$, $k$-category one-hot columns sum to $\1$. Remove any one column and adjust intercept $\beta_0$ to absorb it $\Rightarrow$ identical prediction space.\\
+Proof sketch: If $X=[\1, Z_1,\dots,Z_k, \tilde X]$ with $\sum_{c=1}^k Z_c=\1$, then $[\,\1,Z_1,\dots,Z_{k-1},\tilde X\,]$ spans same column space as $X$. Hence the OLS projection (and optimal residual) is unchanged; predictions are equal; loss identical.
+
+\section*{6. Logistic Regression (Binary)}
+$\sigma(t)=\tfrac{1}{1+e^{-t}}$, $z_i=w^\top x_i+b$, $p_i=\sigma(z_i)$.\\
+NLL: $\ell(w,b)=-\sum\big(y_i\log p_i+(1-y_i)\log(1-p_i)\big)$.\\
+Gradients: $\nabla_w\ell=\sum (p_i-y_i)x_i,\quad \partial\ell/\partial b=\sum (p_i-y_i)$.\\
+Decision boundary is linear; add features for nonlinearity.
+
+\section*{7. Optimization for Least Squares (HW2.P2)}
+Loss $\displaystyle L(w)=\frac{1}{n}\norm{Xw-y}^2$.\\
+\textbf{Gradient: } $\displaystyle \nabla L(w)=\frac{2}{n}X^\top(Xw-y)$.\\
+\textbf{GD update: } $w_{t+1}=w_t-\eta\nabla L(w_t)=\big(I-\tfrac{2\eta}{n}X^\top X\big)w_t+\tfrac{2\eta}{n}X^\top y$.\\
+Let $A=I-\tfrac{2\eta}{n}X^\top X$, $b=\tfrac{2\eta}{n}X^\top y$. Then $w_{t+1}=Aw_t+b$.\\
+If $\rho(A)<1$ (all eigenvalues in $(-1,1)$), then $w_\infty=(I-A)^{-1}b=(X^\top X)^{-1}X^\top y$ (if invertible).\\
+\textbf{Condition on $\eta$: } eigenvalues of $A$ are $1-\tfrac{2\eta}{n}\lambda_i(X^\top X)$; require $|1-\tfrac{2\eta}{n}\lambda_i|<1$ $\Rightarrow$ $0<\eta<\frac{n}{\lambda_{\max}(X^\top X)}$.\\
+\textbf{Closed form iterates: } $w_t=A^t w_0+\sum_{k=0}^{t-1}A^k b = A^t w_0+(I-A^t)(I-A)^{-1}b$.\\
+\textbf{Noisy gradient (SGD model): } $g_t=\nabla L(w_t)+\varepsilon_t$, $\E[\varepsilon_t]=0$. Update $w_{t+1}=w_t-\eta g_t$. Then $\E[w_{t+1}]=A\,\E[w_t]+b$, so $\E[w_t]$ follows deterministic GD $\Rightarrow$ same limit.
+
+\section*{8. Convexity (HW2.P3)}
+Definition: $f$ convex $\Leftrightarrow f(tx+(1-t)y)\le tf(x)+(1-t)f(y)$, $\forall t\in[0,1]$.\\
+(a) $f(x)=x^2$: use $x^2$ second derivative $f''(x)=2\ge0$ (or Jensen).\\
+(b) $(x-b)^2$ convex by translation invariance.\\
+(c) $f(w)=\norm{Xw-y}^2=(Xw-y)^\top(Xw-y)$ with Hessian $2X^\top X\succeq0$.\\
+(d) $f(x)=|\sin x+0.5x|$ is not convex (choose $x_1=0$, $x_2=2\pi$, $t=\tfrac12$; check inequality). GD with small step from $x_0=10$ converges to a local (not global) minimizer near a nearby well of $|\cdot|$.
+
+\section*{9. GD Convergence (General Sketch)}
+$L$ $L$-smooth $\Rightarrow L(w-\eta\nabla L(w))\le L(w)-\big(\eta-\tfrac{L\eta^2}{2}\big)\norm{\nabla L(w)}^2$. Taking $\eta\in(0,1/L]$ ensures descent; for $\mu$-strongly convex, linear rate $(1-\mu\eta)^t$.
+
+\section*{10. Neural Networks: Backprop (HW2.P4)}
+\textbf{1D input, 1 hidden layer (width $h$), ReLU, skip $x\to$ output.}\\
+Forward: $z=W_1 x+b_1\in\R^h$, $h=\mathrm{ReLU}(z)$, $\hat y=W_2 h+b_2 + x$, $L=\tfrac12(\hat y-y)^2$. Let $e=\hat y-y$.\\
+Backprop: $\partial L/\partial \hat y=e$.\\
+$\boxed{\partial L/\partial b_2=e},\quad \boxed{\partial L/\partial W_2 = e\,h^\top}$.\\
+$\,\partial L/\partial h = e\,W_2^\top$, \quad $\partial L/\partial z = (e\,W_2^\top)\odot \1_{z>0}$.\\
+$\boxed{\partial L/\partial W_1 = \big((e\,W_2^\top)\odot \1_{z>0}\big)\,x^\top},\quad
+\boxed{\partial L/\partial b_1=(e\,W_2^\top)\odot \1_{z>0}}.$\\
+Input gradient: $\boxed{\frac{\partial L}{\partial x}=e\cdot \underbrace{1}_{\text{skip}} + W_1^\top\big((e\,W_2^\top)\odot \1_{z>0}\big)}$.\\
+\textit{Skip effects:} (i) adds identity path for $\partial L/\partial x$ (gradient highway); (ii) in deep nets, residuals $y=x+F(x)$ improve gradient flow to early layers; (iii) here, parameters still backprop via $W_2,W_1$, but the skip does not directly change $\partial L/\partial W_1$ except through $e$.
+
+\section*{11. Deep Nets: Practical Essentials}
+\textbf{Init/vanish/explode:} deep linear stacks amplify by singular values; choose variance-scaled init (He/Glorot).\\
+\textbf{Activations:} ReLU avoids sigmoid saturation; GeLU smooth variant.\\
+\textbf{Regularization:} weight decay (L2 on weights), dropout (zero activations w.p. $p$, scale at test), early stopping.\\
+\textbf{Normalization:} LayerNorm: $\hat x=(x-\mu)/\sigma$, then scale/shift; stabilizes training.\\
+\textbf{SWA:} average late SGD iterates to move to flatter minima.
+
+\section*{12. Logistic vs Linear: Key Contrasts}
+OLS closed-form; logistic uses NLL, optimized via (S)GD/Newton.\\
+Hessians: OLS $2X^\top X$; logistic $X^\top S X$ with $S=\diag(p_i(1-p_i))$. Newton step: $(X^\top S X)^{-1}X^\top (y-p)$ (IRLS).
+
+\section*{13. Handy Identities \& Tricks}
+Projection matrix: $P_X=X(X^\top X)^{-1}X^\top$, residual-maker $M=I-P_X$.\\
+Pseudo-inverse (full row/col rank cases): $X^+=\begin{cases}(X^\top X)^{-1}X^\top,& \mathrm{full\ col\ rank}\\ X^\top(XX^\top)^{-1},& \mathrm{full\ row\ rank}\end{cases}$.\\
+Hinge feature: $(x-\lambda)_+=\max(0,x-\lambda)$ for piecewise linearity.\\
+Subgradient at $0$: $\partial|u|=[-1,1]$.\\
+Spectral condition for GD: $\eta<\tfrac{2}{L}$ on $L$-smooth; linear-regression case: $L=\tfrac{2}{n}\lambda_{\max}(X^\top X)$.
+
+\columnbreak
+
+\section*{14. Mini Proof Outlines (Write Fast)}
+\textbf{Median minimizes $\ell_1$:} subgradient $0\in\sum_i \mathrm{sign}(m-y_i)$ $\Leftrightarrow$ \#left $\ge$ \#right and vice versa. Any median satisfies.\\
+\textbf{Midrange minimizes $\ell_\infty$:} shrinking max deviation requires centering interval $[m-\delta,m+\delta]$ to contain data; optimal when endpoints touch min/max $\Rightarrow m=(\min+\max)/2$.\\
+\textbf{Centering \& $\ell_2$:} with intercept, column shifts lie in span of intercept, so $P_{X'}=P_X$.\\
+\textbf{Drop-one one-hot:} since $\sum_c Z_c=\1$, dropped column is linear combo of remaining + intercept; same column space $\Rightarrow$ same OLS projection.\\
+\textbf{GD limit (HW2.P2):} $w_t=A^t w_0 + \sum_{k=0}^{t-1}A^k b$. If $\rho(A)<1$, $A^t\!\to0$ and $\sum A^k=(I-A)^{-1}$, so $w_\infty=(I-A)^{-1}b=(X^\top X)^{-1}X^\top y$.\\
+\textbf{Noisy GD expectation:} linearity of expectation cancels zero-mean noise; same fixed point.
+
+\section*{15. Exam Quick-Write Templates}
+\textbf{OLS derivation:} write $L=\norm{y-X\beta}^2\Rightarrow \nabla L=-2X^\top(y-X\beta)\stackrel{!}{=}0\Rightarrow X^\top X\beta=X^\top y$.\\[1pt]
+\textbf{WLS gradient:} $-2X^\top W(y-X\beta)$; solution $(X^\top W X)^{-1}X^\top W y$.\\[1pt]
+\textbf{Logistic grad:} $\sum(\sigma(w^\top x_i)-y_i)x_i$.\\[1pt]
+\textbf{Piecewise design:} $[\,\1,\ x,\ (x-\lambda)_+\,]$.\\[1pt]
+\textbf{GD matrix form:} $A=I-\frac{2\eta}{n}X^\top X$, $b=\frac{2\eta}{n}X^\top y$.\\[1pt]
+\textbf{Backprop (ReLU-MLP+skip):} see Sec. 10 boxed formulas.
+
+\section*{16. Sanity Checks / Pitfalls}
+Check intercept! Mean-centering without intercept changes model.\\
+Large degree polynomials $\Rightarrow$ regularize or validate degree.\\
+Class imbalance in logistic $\Rightarrow$ consider bias term, thresholding, or reweighting.\\
+Learning rate: too large violates $\rho(A)<1$; too small slow.\\
+Dropout: remember \emph{train} vs \emph{test} behavior (scale).
+
+\section*{17. Time-Savers}
+Keep canonical forms in mind: normal eqns, IRLS step, projection matrices.\\
+Derive once; memorize patterns. Write subgradient logic succinctly.\\
+For proofs, state assumptions (invertibility, step-size bounds) clearly.
+
+\end{multicols*}
+
+} % end tiny font
+\end{document}
